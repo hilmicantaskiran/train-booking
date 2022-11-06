@@ -1,0 +1,43 @@
+@base_url = http://localhost:3000/api/v1
+
+### Get ALl Wagons
+GET {{base_url}}/wagon HTTP/1.1
+Content-Type: application/json
+
+### Get Wagon with ID
+GET {{base_url}}/wagon?id=63666111fcaf1005a31ea5fb HTTP/1.1
+Content-Type: application/json
+
+### Get Wagons By Train with Train ID
+GET {{base_url}}/wagon/connectedTrain?train_id=636660f8fcaf1005a31ea5f8 HTTP/1.1
+Content-Type: application/json
+
+### Create Wagon
+POST {{base_url}}/wagon HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Wagon 3",
+    "capacity": 100,
+    "numberOfFullSeats": 18,
+    "connectedTrain": "636660f8fcaf1005a31ea5f8"
+}
+
+### Put Wagon with ID
+PUT {{base_url}}/wagon?id=636665c0df20e7047c87c585 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Wagon 2",
+    "capacity": 100,
+    "numberOfFullSeats": 25,
+    "connectedTrain": "636660f8fcaf1005a31ea5f8"
+}
+
+### Delete Wagon with ID
+DELETE {{base_url}}/wagon?id=6366617a5d06b9471cdcdf86 HTTP/1.1
+Content-Type: application/json
+
+### Delete All Wagons
+DELETE {{base_url}}/wagon/all HTTP/1.1
+Content-Type: application/json

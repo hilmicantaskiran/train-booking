@@ -1,0 +1,23 @@
+@base_url = http://localhost:3000/api/v1
+
+### Get All Books
+GET {{base_url}}/book HTTP/1.1
+Content-Type: application/json
+
+### Get Book with ID
+GET {{base_url}}/book?id=636681af13a48d3b80879c03 HTTP/1.1
+Content-Type: application/json
+
+### Create a new book
+POST {{base_url}}/book HTTP/1.1
+Content-Type: application/json
+
+{
+    "train": "636660f8fcaf1005a31ea5f8",
+    "numberOfPeopleToBook": 4,
+    "peopleCanPlaceInDifferentWagons": true
+}
+
+### Delete Book with ID
+DELETE  {{base_url}}/book?id=6367c3b53a8097ce5d6bc90c HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,29 @@
+@base_url = http://localhost:3000/api/v1
+
+### Get ALl Trains
+GET {{base_url}}/train HTTP/1.1
+Content-Type: application/json
+
+### Get Train with ID
+GET {{base_url}}/train?id=636660f8fcaf1005a31ea5f8 HTTP/1.1
+Content-Type: application/json
+
+### Create Train
+POST {{base_url}}/train HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Ankara Express" }
+
+### Put Train with ID
+PUT {{base_url}}/train?id=6363f29db648887b2f957b5b HTTP/1.1
+Content-Type: application/json
+
+{ "name": "İstanbul Express" }
+
+### Delete Train with ID
+DELETE {{base_url}}/train?id=6363ed6e56bad432d1a16575 HTTP/1.1
+Content-Type: application/json
+
+### Delete All Trains
+DELETE {{base_url}}/train/all HTTP/1.1
+Content-Type: application/json
